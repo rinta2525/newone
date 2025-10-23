@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>佐賀県陸上競技協会</title>
+  <meta name="description" content="佐賀県陸上競技協会公式サイト（モックアップ）" />
+  <link rel="stylesheet" href="./競技会/競技会.css" />
+  <script src="./競技会/競技会.js"></script>
+</head>
+<body>
+  <!-- header -->
+  <header role="banner">
+    <div class="logo">
+      <a href="./index/index.html"><img src="./img/ef3f8a78-1cb2-4de2-8770-1479ad12b5bc-removebg-preview.png" alt=""></a>
+    </div>
+    <div class="header-list">
+      <nav class="globalnav">
+        <ul>
+          <li><a href="./index/index.html">HOME</a></li>
+          <li>
+            <a href="./競技会/競技会.html">競技会<span class="icon"></span></a>
+            <ul>
+              <li><a href="./競技会/競技会.html">開催日程</a></li>
+              <li><a href="./競技会/競技会.html">競技結果</a></li>
+              <li><a href="">速報サイト</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./陸連登録/陸連登録.html">陸連登録<span class="icon"></span></a>
+            <ul>
+              <li><a href="./陸連登録/選手登録/index.html">登録手続きについて</a></li>
+              <li><a href="./陸連登録/出場認知書/index.html">出場認知証の発行について</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="./県記録/Prefecture_record.pdf">県記録</a>
+          </li>
+          <li><a href="./忘れ物/index.html">忘れ物</a></li>
+          <li><a href="./リンク/index.html">リンク</a></li>
+          <li><a href="./お問い合わせ/index.html">お問い合わせ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- mobile -->
+  <div class="mobile-header">
+    <img src="./img/ef3f8a78-1cb2-4de2-8770-1479ad12b5bc-removebg-preview.png" alt="">
+  </div>
+  <div class="hamburger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+  <div class="overlay"></div>
+  <div class="mobile-menu">
+    <nav class="globalnav-mobile">
+      <ul>
+        <li><a href="./index/index.html">HOME</a></li>
+        <li>
+          <a href="./競技会/競技会.html">競技会</a>
+          <ul>
+            <li><a href="./競技会/競技会.html">開催日程</a></li>
+            <li><a href="./競技会/競技会.html">競技結果</a></li>
+            <li><a href="">速報サイト</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="./陸連登録/陸連登録.html">陸連登録</a>
+          <ul>
+            <li><a href="./陸連登録/選手登録/index.html">登録手続きについて</a></li>
+            <li><a href="./陸連登録/出場認知書/index.html">出場認知証の発行について</a></li>
+          </ul>
+        </li>
+        <li><a href="./県記録/Prefecture_record.pdf">県記録</a></li>
+        <li><a href="./忘れ物/index.html">忘れ物</a></li>
+        <li><a href="./リンク/index.html">リンク</a></li>
+        <li><a href="./お問い合わせ/index.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <!-- main -->
+  <div class="main">
+    <div class="main-title"><h1>競技会</h1></div>
+    <div class="main-cell">
+      <div id="tabs">
+        <div class="tab active" data-target="upcoming">これからの大会</div>
+        <div class="tab" data-target="all">すべての大会</div>
+        <div class="tab" data-target="past">終わった大会</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- これからの大会 -->
+  <div class="content active" id="upcoming">
+    <ul class="event-list">
+      <!-- JSで大会カードを自動生成 -->
+    </ul>
+  </div>
+
+  <!-- すべての大会 -->
+  <div class="content" id="all">
+    <ul class="event-list">
+      <!-- JSで大会カードを自動生成 -->
+    </ul>
+  </div>
+
+  <!-- 終わった大会 -->
+  <div class="content" id="past">
+    <ul class="event-list">
+      <!-- JSで大会カードを自動生成 -->
+    </ul>
+  </div>
+
+
+  
+</body>
+</html>
