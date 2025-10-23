@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>佐賀県陸上競技協会</title>
+  <meta name="description" content="佐賀県陸上競技協会公式サイト（モックアップ）" />
+  <link rel="stylesheet" href="index/index.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@100..900&family=Oswald:wght@200..700&family=Playwrite+RO:wght@100..400&family=Shippori+Mincho&family=Shippori+Mincho+B1&family=Zen+Kaku+Gothic+New&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- header (PC用) -->
+     <header role="banner">
+        <div class="logo">
+            <a href="index.html"><img src="img/ef3f8a78-1cb2-4de2-8770-1479ad12b5bc-removebg-preview.png" alt=""></a>
+        </div>
+
+        <div class="header-list">
+            <nav class="globalnav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li>
+                        <a href="競技会/競技会.html">競技会<span class="icon"></span></a>
+                        <ul>
+                            <li><a href="競技会/競技会.html">開催日程</a></li>
+                            <li><a href="競技会/競技会.html">競技結果</a></li>
+                            <li><a href="">速報サイト</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="陸連登録/陸連登録.html">陸連登録<span class="icon"></span></a>
+                        <ul>
+                            <li><a href="陸連登録/選手登録/index.html">登録手続きについて</a></li>
+                            <li><a href="陸連登録/出場認知書/index.html">出場認知証の発行について</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="県記録/Prefecture_record.pdf">県記録</a>
+                    </li>
+                    <li><a href="忘れ物/index.html">忘れ物</a></li>
+                    <li><a href="リンク/index.html">リンク</a></li>
+                    <li><a href="お問い合わせ/index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+     </header>
+
+     <div class="mobile-header">
+        <a href=""><img src="./img/ef3f8a78-1cb2-4de2-8770-1479ad12b5bc-removebg-preview.png" alt=""></a>
+    </div>
+     <!-- 📱 mobile menu -->
+     <div class="hamburger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+     </div>
+
+     <div class="overlay"></div>
+
+     <div class="mobile-menu">
+         <nav class="globalnav-mobile">
+             <ul>
+                 <li><a href="index.html">HOME</a></li>
+                 <li>
+                    <a href="競技会/競技会.html">競技会</a>
+                    <ul>
+                        <li><a href="競技会/競技会.html">開催日程</a></li>
+                        <li><a href="競技会/競技会.html">競技結果</a></li>
+                        <li><a href="">速報サイト</a></li>
+                    </ul>
+                 </li>
+                 <li>
+                    <a href="陸連登録/陸連登録.html">陸連登録</a>
+                    <ul>
+                        <li><a href="陸連登録/選手登録/index.html">登録手続きについて</a></li>
+                        <li><a href="陸連登録/大会認知書/index.html">出場認知証の発行について</a></li>
+                    </ul>
+                 </li>
+                 <li><a href="県記録/index.html">県記録</a></li>
+                 <li><a href="忘れ物/index.html">忘れ物</a></li>
+                 <li><a href="リンク/index.html">リンク</a></li>
+                 <li><a href="お問い合わせ/index.html">お問い合わせ</a></li>
+             </ul>
+         </nav>
+     </div>
+
+     <!-- main -->
+      <div class="main">
+        <div class="background-img"><img src="img/sagaスタジアム.jpg" alt=""></div>
+        <div class="main-text">
+            <img src="img/SAGA__1_-removebg-preview.png" alt="">
+        </div>
+      </div>
+      
+     <!-- information -->
+      <!-- 既存のinformation部分そのまま -->
+    <div class="information-title"><h1>information</h1></div>
+      <div class="information">
+        <ul></ul> <!-- JSがここに自動で挿入 -->
+      </div>
+      <div class="information-button">
+        <button><a href="information/information.html">もっと見る</a></button>
+      </div>
+
+<!-- スクリプトを追加 -->
+<script src="js/information.js"></script>
+
+<!-- 大会情報 -->
+<div class="page-header"><h1>schedule</h1></div>
+<div class="test-code">
+  <div class="page-wrapper">
+    <div class="grid-row">
+      <!-- 左側：競技日程 -->
+      <div class="post-grid-box">
+        <div class="grid-title">開催日程
+          <img src="img/カレンダー・スケジュールの無料アイコン素材 4.png" alt="">
+        </div>
+        <div class="post-grid-container">
+          <div class="post-grid" id="home-schedule">
+            <!-- JSで大会カードを動的に挿入 -->
+          </div>
+        </div>
+        <div class="information-button">
+          <button><a href="競技会/競技会.html">もっと見る</a></button>
+        </div>
+      </div>
+
+      <!-- 右側：競技結果 -->
+      <div class="post-grid-box">
+        <div class="grid-title-b">競技結果
+          <img src="img/表彰台の無料アイコン素材 1.png" alt="">
+        </div>
+        <div class="post-grid-container-b">
+          <div class="post-grid" id="home-results">
+            <!-- JSで終了した大会カードを動的に挿入 -->
+          </div>
+        </div>
+        <div class="information-button">
+          <button><a href="競技会/競技会.html?tab=finished">もっと見る</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- 登録 -->
+ <div class="registration-title"><h1>registration</h1></div>
+  <div class="registration">
+  <!-- 陸連登録 -->
+  <a href="./陸連登録/選手登録/index.html">
+    <h3>選手登録</h3>
+    <img src="./img/陸連登録.png" alt="陸連登録">
+    <p>陸上競技連盟への登録手続きについての情報を提供します。</p>
+  </a>
+  <!-- 出場認知書 -->
+  <a href="./陸連登録/出場認知書/index.html">
+    <h3>出場認知書</h3>
+    <img src="./img/出場認知書.png" alt="出場認知書">
+    <p>大会出場に必要な認知書の発行手続きについての情報を提供します。</p>
+  </a>
+  </div>
+
+    
+
+
+        <!-- 協賛企業 -->
+        <div class="sponsor">
+            <h1>sponsor</h1>
+            <div class="sponsor-logo">
+                <a href="https://www.mat.jp/"><img src="./img/sponser.jpg" alt=""></a>
+            </div>
+        </div>
+        <!-- フッター -->
+<!-- フッター -->
+<div class="footer">
+  <div class="footer-content">
+    <!-- 左側：メニュー -->
+    <div class="footer-menu">
+      <ul>
+        <li>
+          <p>競技会</p>
+          <ul>
+            <li><a href="競技会/競技会.html">開催日程</a></li>
+            <li><a href="競技会/競技会.html">競技結果</a></li>
+          </ul>
+        </li>
+        <li>
+          <p>陸連登録</p>
+          <ul>
+            <li><a href="陸連登録/選手登録/index.html">登録手続きについて</a></li>
+            <li><a href="陸連登録/出場認知書/index.html">出場認知書の発行について</a></li>
+          </ul>
+        </li>
+        <li><a href="忘れ物/index.html">忘れ物</a></li>
+        <li><a href="リンク/index.html">リンク</a></li>
+        <li><a href="お問い合わせ/index.html">お問い合わせ</a></li>
+      </ul>
+    </div>
+
+    <!-- 右側：ロゴ -->
+    <div class="footer-logo">
+      <img src="img/SAGA__1_-removebg-preview.png" alt="佐賀県陸上競技協会ロゴ">
+    </div>
+  </div>
+</div>
+
+</div>
+<div class="copyright"><p>© 2024 Saga Athletics Association</p></div>
+    <script src="index/index.js"></script>
+</body>
+</html>
