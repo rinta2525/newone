@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // --- JSONから大会カード生成 ---
-  fetch('./data/events.json')
+  fetch('../data/events.json')
     .then(res => res.json())
     .then(data => {
       const today = new Date();
@@ -113,4 +113,5 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     .catch(err => console.error('JSON読み込みエラー:', err));
 });
+
 
