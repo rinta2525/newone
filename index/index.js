@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-   fetch('../data/events.json')
+   fetch('./data/events.json')
 
     .then(res => res.json())
     .then(data => {
@@ -89,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+
 
 
 
