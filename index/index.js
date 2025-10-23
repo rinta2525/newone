@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  const pathPrefix = window.location.pathname.includes('/pages/') ? '../' : './';
-  fetch(`${pathPrefix}data/events.json`)
+   fetch('../data/events.json')
 
     .then(res => res.json())
     .then(data => {
@@ -90,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+
 
 
 
