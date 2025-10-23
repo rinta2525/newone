@@ -17,7 +17,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-  fetch('./data/events.json')
+  const pathPrefix = window.location.pathname.includes('/pages/') ? '../' : './';
+  fetch(`${pathPrefix}data/events.json`)
+
     .then(res => res.json())
     .then(data => {
       const today = new Date();
@@ -88,5 +90,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
+
 
 
