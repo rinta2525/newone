@@ -4,7 +4,7 @@
     "startDate": "2025-04-05",
     "endDate": "2025-04-05",
     "description": "",
-    "link": "./競技会/events/春季記録会/index.html",
+    "link": "../競技会/events/春季記録会/index.html",
     "documents": {
       "要項": "/競技会/events/春季記録会/図や表の挿入完成.pdf",
       "申込用紙": "",
@@ -870,4 +870,5 @@
     }
   }
 ]
+
 
