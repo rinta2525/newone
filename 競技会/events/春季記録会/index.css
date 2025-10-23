@@ -1,0 +1,490 @@
+body{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    background-color: wheat;
+    padding: 0;
+    margin: 0;
+}
+.logo{
+    margin-left: 40px;
+}
+.logo img{
+    width: 260px;
+    margin-right: 90px;
+}
+.mobile-menu{
+    display: none;
+}
+nav ul ul {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+/* ...既存のコード... */
+
+/* ドロップダウンメニューの初期状態を非表示に */
+.globalnav ul ul {
+    display: none;
+    position: absolute;
+    background: #fff;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    min-width: 120px;
+    width: auto;           /* 追加：内容に合わせて幅を調整 */
+    box-sizing: border-box;/* 追加：パディング込みで幅を計算 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+}
+
+/* liの位置を相対指定（サブメニューの絶対配置用） */
+.globalnav ul li {
+    position: relative;
+}
+
+/* aにホバーしたとき、直下のulを表示 */
+.globalnav ul > li:hover > ul {
+    display: block;
+}
+
+/* サブメニューのliの装飾例 */
+.globalnav ul ul li a {
+    display: block;
+    padding: 8px 16px;
+    color:#222;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.globalnav ul ul li a:hover {
+    background: #f0f0f0;
+}
+
+/* メインメニューの横並び */
+/* ...既存のコード... */
+.globalnav > ul {
+    display: flex;
+    gap: 0px; /* メニュー間の間隔 */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    flex-wrap: nowrap;        /* 追加：折り返し防止 */
+    white-space: nowrap;      /* 追加：テキストの折り返し防止 */
+}
+
+/* メインメニューのa装飾例 */
+.globalnav > ul > li > a {
+    display: block;
+    padding: 10px 10px;
+    color: #222;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ...既存のコード... */
+.header{
+    height: 70px;
+    background-color:white;
+    display: flex;
+    position: fixed;
+    z-index: 1000;
+    padding: 0;
+    width: 100%;  
+    margin: 0; 
+    left: 0;
+    top: 0;
+}
+.mobile-header{
+    display: none;
+}
+.globalnav ul li a{
+    color:#C8161D;
+}
+.header-logo img{
+    width: 260px;
+    padding-left: 10px;
+}
+.header-logo{
+    margin-right: 90px;
+}
+/* ...既存のコード... */
+.header-list .globalnav > ul > li {
+    margin-right: 24px; /* 右側の間隔を広げる */
+    /* 必要に応じてmargin-leftも調整できます */
+    padding-top: 15px;
+}
+.header-list h1{
+    font-size: 13px;
+}
+.icon::after {
+  content: "\2228"; /* Unicode for ∨ */
+  font-size: 0.9em;
+  margin-left: 6px;
+  color: #555;
+}
+
+.contact{
+    background-color: orangered;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.contact li a{
+   color: white !important;
+}
+/* === ハンバーガーボタン === */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger .line {
+  background-color: #000;
+  height: 4px;
+  width: 100%;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.hamburger .line:nth-child(1) { top: 0; }
+.hamburger .line:nth-child(2) { top: 9px; }
+.hamburger .line:nth-child(3) { bottom: 0; }
+
+.hamburger.active .line:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+.hamburger.active .line:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active .line:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* === モバイルメニュー === */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  width: 280px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0;
+  transition: all 0.4s;
+  /* 非アクティブ時は操作を受け付けない（display を切り替えるJSがある場合に備える） */
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.mobile-menu.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* === メニューの中身 === */
+.globalnav-mobile ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+.globalnav-mobile ul li {
+  margin: 10px 0;
+}
+
+.globalnav-mobile a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.globalnav-mobile a:hover {
+  color: #c8161d;
+}
+
+/* === 背景オーバーレイ === */
+.overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 999;
+  /* 非表示時はクリックやタッチを無効化 */
+  pointer-events: none;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+/* ===== 大会専用ページ ===== */
+.page-header{
+  padding-top: 30px;
+  padding-left: 30px;
+  width: 80%;
+}
+.page-header h1{
+  font-size: 30px;
+  border-bottom: 3px solid gray;
+}
+.main{
+  width: 100%;
+  padding-top: 70px;
+}
+.event-detail {
+  padding-left: 30px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.event-date,
+.event-place {
+  margin: 5px 0;
+  font-size: 15px;
+}
+.event{
+  padding-left: 50px;
+}
+/* ===== セクション見出し ===== */
+.event-section{
+  padding-top: 50px;
+}
+.event-section h2 {
+  border-left: 4px solid gray;
+  padding-left: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* ===== 資料カードエリア ===== */
+.event-section a{
+  text-align: center;
+  border-radius: 20px;
+  padding: 5px 2px;
+}
+.event-section a:hover{
+  background: #fff5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+.event-section a{
+  text-decoration: none;
+  color: #b40000;
+}
+.event-section a img{
+  width: 3%;
+}
+
+.footer {
+  background-color:rgb(184, 182, 182); /* 濃い赤 */
+  color: #fff;
+  padding: 40px 20px;
+  font-size: 14px;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+/* --- 左側：メニュー --- */
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-menu li {
+  margin-bottom: 8px;
+}
+
+.footer-menu p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 5px;
+}
+
+.footer-menu a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-menu a:hover {
+  color: #ffb3b3;
+  text-decoration: underline;
+}
+
+/* --- 右側：ロゴ --- */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-logo img {
+  width: 350px; /* ロゴサイズ調整 */
+  height: auto;
+  object-fit: contain;
+  transition: 0.3s;
+}
+
+.footer-logo img:hover {
+  opacity: 0.8;
+}
+@media (max-width: 1024px) {
+  header { display: none; }
+  .hamburger { display: block; }
+    .mobile-header{
+        display: block;
+        width: 100%;
+        background-color: white;
+        position: fixed;
+        z-index: 1000;
+    }
+    .mobile-header img{
+        width: 140px;
+        margin: 10px 0 0 20px;
+    }
+  .mobile-menu{
+    display: block;
+    margin-left: auto;
+    margin-right: 12px;
+    cursor: pointer;
+  }
+  .globalnav-mobile ul li {
+    position: static; /* 親の相対配置をリセット */
+  }
+  .globalnav-mobile ul li ul {
+    display: block !important; /* 常に表示 */
+    position: static !important; /* 絶対配置を無効化 */
+    padding-left: 12px;
+    margin-top: 6px;
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  /* --- モバイル: メイン/サブ差別化デザイン --- */
+  /* モバイルメニュー全体の幅調整 */
+  .mobile-menu {
+    width: 92vw;
+    max-width: 360px;
+    left: 50%;
+    top: 10vh; /* 画面上部からの位置を抑える */
+    transform: translateX(-50%); /* 横中央に寄せるのみ */
+    padding: 12px;
+    box-sizing: border-box;
+    max-height: 80vh; /* 画面をはみ出さない最大高さ */
+    overflow-y: auto; /* 長いメニューは内部でスクロール */
+  }
+
+  .globalnav-mobile {
+    text-align: left;
+  }
+
+  /* メインメニュー（トップレベル）の見た目 */
+  .globalnav-mobile > ul > li {
+    margin: 8px 0;
+  }
+  .globalnav-mobile > ul > li > a {
+    display: block;
+    padding: 14px 16px;
+    background: linear-gradient(180deg,#ffffff,#fbfbfb);
+    border: 1px solid #ececec;
+    border-radius: 8px;
+    color: #222;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+    text-decoration: none;
+  }
+  /* サブメニュー有りの視覚的ヒント（右側の矢印） */
+  .globalnav-mobile > ul > li > a::after {
+    content: '›';
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #bdbdbd;
+    font-weight: 700;
+  }
+
+  /* サブメニュー（常に表示） */
+  .globalnav-mobile ul li ul {
+    background: #fafafa;
+    margin: 6px 12px 0 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+  }
+  .globalnav-mobile ul li ul li a {
+    display: block;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: #555;
+    font-weight: 500;
+    margin: 4px 0;
+    text-decoration: none;
+    border-radius: 6px;
+  }
+  .globalnav-mobile ul li ul li a:hover {
+    background: #fff;
+    color: #c8161d;
+  }
+
+  /* 深い階層がある場合の小さめのインデント */
+  .globalnav-mobile ul li ul li ul {
+    padding-left: 8px;
+    margin-top: 4px;
+    background: transparent;
+    border: none;
+  }
+
+  /* オーバーレイと開閉時の状態 */
+  .overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  .mobile-menu.active {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  .event-section p{
+    width: 50%;
+  }
+  .event-section a img{
+    width: 15%;
+  }
+}

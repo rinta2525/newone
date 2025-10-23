@@ -1,0 +1,260 @@
+/* ===== Main Section ===== */
+.main {
+  background-color: #fff;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.main-title h1 {
+  color: #cec7c7;
+  font-size: 48px;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+/* ===== Tabs ===== */
+#tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  border-bottom: 2px solid #e6e6e6;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 10px 25px;
+  border-radius: 30px 30px 0 0;
+  background-color: #f7f7f7;
+  color: #555;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.tab:hover {
+  background-color: #f0f0f0;
+  color: #C8161D;
+}
+
+.tab.active {
+  background-color: #C8161D;
+  color: #fff;
+  box-shadow: 0 -2px 8px rgba(200, 22, 29, 0.3);
+}
+
+/* ===== Content Sections ===== */
+.content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.content.active {
+  display: block;
+}
+
+/* ===== Event List ===== */
+.upcoming ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 70%;
+  text-align: left;
+}
+
+.upcoming li {
+  background: #fafafa;
+  margin: 10px 0;
+  padding: 15px 20px;
+  border-radius: 12px;
+  border-left: 5px solid #C8161D;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.upcoming li:hover {
+  background: #fff5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+.upcoming .name a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.upcoming .name a:hover {
+  color: #C8161D;
+}
+
+.upcoming .date {
+  color: #888;
+  font-size: 15px;
+}
+.toggle-btn{
+  width: 100%;
+  font-size: 40px;
+}
+/* ===== Fade Animation ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== Tabs部分は前回と同じでOK ===== */
+
+/* ===== Event List ===== */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  width: 70%;
+  text-align: left;
+}
+
+.event-item {
+  background: #fafafa;
+  margin: 12px 0;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border-left: 5px solid #C8161D;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.event-item:hover {
+  background: #fff5f5;
+  transform: translateY(-3px);
+  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+}
+
+/* タイトル行 */
+.event-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-item .name a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.event-item .name a:hover {
+  color: #C8161D;
+}
+
+/* 開催日 */
+.event-item .date {
+  display: block;
+  color: #666;
+  font-size: 15px;
+  margin-top: 6px;
+  margin-left: 4px;
+}
+
+/* ＋ボタン */
+.toggle-btn {
+  background: #C8161D;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 26px;
+  transition: 0.2s;
+}
+
+.toggle-btn:hover {
+  background: #a11218;
+  transform: rotate(90deg);
+}
+
+/* 詳細部分 */
+.event-detail {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
+  color: #333;
+  font-size: 15px;
+}
+
+.event-detail p {
+  margin: 5px 0;
+}
+
+/* 表示時アニメーション */
+.event-item.active .event-detail {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* + / - アイコン */
+.toggle-icon {
+  background: #C8161D;
+  color: #fff;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.2s;
+}
+
+.event-item.active .toggle-icon {
+  transform: rotate(90deg);
+}
+
+/* PDFボタン */
+.pdf-btn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.pdf-btn:hover {
+  background-color: #004999;
+}
+
+/* イベントカード全体がクリック可能に */
+.event-item {
+  cursor: pointer;
+}
+
+/* 詳細 */
+.event-detail {
+  display: none;
+  margin-top: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #ddd;
+  color: #333;
+  font-size: 15px;
+}
+
+.event-item.active .event-detail {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
