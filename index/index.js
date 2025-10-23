@@ -17,8 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-   fetch('./data/events.json')
-
+  fetch('./data/events.json')
     .then(res => res.json())
     .then(data => {
       const today = new Date();
@@ -89,8 +88,3 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 });
-
-
-
-
-
