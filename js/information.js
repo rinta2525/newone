@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (!infoContainer) return;
 
   try {
-    const res = await fetch('/data/information.json');
+    const res = await fetch('../data/information.json');
     const data = await res.json();
 
     // 日付で降順ソート
     data.sort((a, b) => new Date(b.date) - new Date(a.date));
 
     // index.htmlかinformation.htmlか判定
-    const isHome = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+    const isHome = window.location.pathname.endsWith('../index.html') || window.location.pathname === '/';
     const displayData = isHome ? data.slice(0, 7) : data;
 
     if (isHome) {
@@ -50,3 +50,4 @@ document.addEventListener('DOMContentLoaded', async () => {
     infoContainer.innerHTML = '<li>お知らせを読み込めませんでした。</li>';
   }
 });
+
