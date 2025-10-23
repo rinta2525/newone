@@ -4,7 +4,7 @@
     "startDate": "2025-04-05",
     "endDate": "2025-04-05",
     "description": "",
-    "link": "/競技会/events/春季記録会/index.html",
+    "link": "./競技会/events/春季記録会/index.html",
     "documents": {
       "要項": "/競技会/events/春季記録会/図や表の挿入完成.pdf",
       "申込用紙": "",
@@ -20,7 +20,7 @@
     "startDate": "2025-04-06",
     "endDate": "2025-04-06",
     "description": "",
-    "link": "/競技会/events/第１回佐賀長距離記録会兼第５回九州実業団連盟長距離記録会（SAGAスタジアム）/index.html",
+    "link": "./競技会/events/第１回佐賀長距離記録会兼第５回九州実業団連盟長距離記録会（SAGAスタジアム）/index.html",
     "documents": {
       "要項": "",
       "申込用紙": "",
@@ -35,7 +35,7 @@
     "startDate": "2025-04-13",
     "endDate": "2025-04-13",
     "description": "",
-    "link": "/競技会/events/第６６回唐津陸上競技記録会（唐津/index.html",
+    "link": "./競技会/events/第６６回唐津陸上競技記録会（唐津/index.html",
     "documents": {
       "要項": "",
       "申込用紙": "",
@@ -50,7 +50,7 @@
     "startDate": "2025-04-19",
     "endDate": "2025-04-20",
     "description": "",
-    "link": "/競技会/events/佐賀県陸上競技記録会兼国民スポーツ大会選考会（SAGAスタジアム）/index.html",
+    "link": "./競技会/events/佐賀県陸上競技記録会兼国民スポーツ大会選考会（SAGAスタジアム）/index.html",
     "documents": {
       "要項": "",
       "申込用紙": "",
@@ -870,3 +870,4 @@
     }
   }
 ]
+
